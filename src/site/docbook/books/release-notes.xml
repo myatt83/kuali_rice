@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Copyright 2005-2013 The Kuali Foundation
+    
+    Licensed under the Educational Community License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http://www.opensource.org/licenses/ecl2.php
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    
+-->
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <info>
+        <title>Kuali Rice ${project.version} Release Notes</title>
+        <edition>${project.version}</edition>
+        <pubdate>Released: ${docbook.build.timestamp}</pubdate>
+    </info>
+    <section xml:id="overview" xreflabel="Overview">
+        <title>Overview</title>
+        <para>Welcome to Rice ${project.version}! </para>
+        <section>
+            <title>Release Highlights</title>
+            <para> Rice ${project.version} is a bug fix release with some documentation
+                updates.</para>
+        </section>
+        <section>
+            <title>Download</title>
+            <para>Kuali Rice ${project.version} can be downloaded from the Rice website at <link xlink:show="new" xlink:href="http://kuali.org/rice/download">http://kuali.org/rice/download</link>.</para>
+            <para>There are three different distributions of Rice available: source, binary and
+                server. Please read the <link xlink:href="http://site.kuali.org/rice/${project.version}/reference/html/IG.html">Installation Guide</link> for
+                more details on each of these distributions.</para>
+            <para>Applications can also consume Rice from the maven site at <link
+                xlink:href="http://search.maven.org/#search|ga|1|org.kuali.rice"
+                >http://search.maven.org/#search|ga|1|org.kuali.rice</link>.</para>
+        </section>
+        <section>
+            <title>Documentation</title>
+            <para>API Documentation can be found at <link xlink:show="new" xlink:href="http://site.kuali.org/rice/${project.version}/apidocs/index.html">http://site.kuali.org/rice/${project.version}/apidocs/index.html</link></para>
+            <para>Formal documentation can be found at <link xlink:show="new"
+                xlink:href="http://site.kuali.org/rice/${project.version}/reference/html/portal.html"
+                >http://site.kuali.org/rice/${project.version}/reference/html/portal.html</link>.
+                This documentation is still in the process of review and update which will continue
+                through subsequent releases, so please follow the notes in each document to report
+                any outdated information.</para>
+        </section>
+        <section>
+            <title>Contact</title>
+            <para>If you encounter any difficulty, please don't hesitate to contact the Rice team on
+                our public collaboration mailing list at <email>rice.collab@kuali.org</email>.
+                Please indicate that you are using the ${project.version} version of Rice.</para>
+        </section>
+    </section>
+    <section xml:id="upgrade-guide" xreflabel="Upgrade Guide">
+        <title>Upgrade Guide</title>
+        <caution><para>We recommend backing up your database before performing any upgrade!</para></caution>
+        <section>
+            <title>Upgrading the server database</title>
+            <para>MySQL and Oracle scripts for performing these updates are available in the
+                following locations in the Rice distribution downloads:<variablelist>
+                    <varlistentry>
+                        <term>MySQL</term>
+                        <listitem>
+                            <para><code>scripts/upgrades/2.2.3 to
+                                    2.2.4/final/update_final_mysql.sql</code></para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>Oracle</term>
+                        <listitem>
+                            <para><code>scripts/upgrades/2.2.3 to
+                                    2.2.4/final/update_final_oracle.sql</code></para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist></para>
+        </section>
+        <section>
+            <title>Upgrading the client database</title>
+            <para>MySQL and Oracle scripts for performing these updates are available in the
+                following locations in the Rice distribution downloads:<variablelist>
+                    <varlistentry>
+                        <term>MySQL</term>
+                        <listitem>
+                            <para><code>scripts/upgrades/2.2.3 to
+                                    2.2.4/final/update_client_final_mysql.sql</code></para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>Oracle</term>
+                        <listitem>
+                            <para><code>scripts/upgrades/2.2.3 to
+                                    2.2.4/final/update_client_final_oracle.sql</code></para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist></para>
+        </section>
+    </section>
+    <section xml:id="items_addressed_in_rice">
+        <title>Items Addressed in Rice ${project.version}</title>
+        <itemizedlist>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-7930"
+                        >KULRICE-7930</link>] - Person document is allowing add of role memberships
+                    with bad information</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-8844"
+                        >KULRICE-8844</link>] - KualiDocumentFormBase permission checks are more
+                    expensive than they have to be</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-8967"
+                        >KULRICE-8967</link>] - VC integration test
+                    KewWsdlCompatibilityTest.compareKewApiWsdls false negatives</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9143"
+                        >KULRICE-9143</link>] - Non data dictionary attributes missing shortLabel in
+                    DataDictionaryTypeServiceBase</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9144"
+                        >KULRICE-9144</link>] - NPE from AttributesMapBuilder when maxLength not set
+                    on AttributeDefinition</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9145"
+                        >KULRICE-9145</link>] - Upgrade mysql version references from 5.1.18 to
+                    latest</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9149"
+                        >KULRICE-9149</link>] - Remove usage of
+                    org.kuali.rice.krad.service.impl.SessionDocumentServiceImpl in KRAD</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9153"
+                        >KULRICE-9153</link>] - Analyze IU patch for preventing role member lookup
+                    from causing out of memory exceptions</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9155"
+                        >KULRICE-9155</link>] - The docHandlerUrl is not passed to email style
+                    service for processing by email stylesheets</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9156"
+                        >KULRICE-9156</link>] - DataDictionaryTypeServiceBase does not work if
+                    DataObjectEntry is used</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9157"
+                        >KULRICE-9157</link>] - DataDictionaryTypeServiceHelper should check for a
+                    null control</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9158"
+                        >KULRICE-9158</link>] - Null safety issues in
+                    DataDictionaryTypeServiceBase.getDataDictionaryAttributeDefinition</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9159"
+                        >KULRICE-9159</link>] - Show/hide active rows on a collection doesn't
+                    work</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9185"
+                        >KULRICE-9185</link>] - KRAD lookup framework is caching whether or not to
+                    render "create new" link with extreme prejudice </para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9263"
+                        >KULRICE-9263</link>] - Remove unnecessary references to System.exit() in
+                    our code base</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9265"
+                        >KULRICE-9265</link>] - Validation change to support ad hoc routing</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9268"
+                        >KULRICE-9268</link>] - Investigate
+                    QuickLinksServiceTest.testGetRecentSearches</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9272"
+                        >KULRICE-9272</link>] - Instructions to setting up a Rice cluster are
+                    incorrect (installation guide)</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9276"
+                        >KULRICE-9276</link>] - Merge changes from KULRICE-5390 back into 2.2 for
+                    KPME</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9288"
+                        >KULRICE-9288</link>] -
+                    org.kuali.rice.kns.service.impl.PessimisticLockServiceTest fails with Column
+                    'SESN_ID' cannot be null</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9299"
+                        >KULRICE-9299</link>] - Entering nothing into the Login prompt and hitting
+                    enter returns stack trace</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9358"
+                        >KULRICE-9358</link>] - Form and WorkflowDocument no longer being persisted
+                    to session after disabling the SessionDocumentService</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9386"
+                        >KULRICE-9386</link>] - Issues with doctype xml ingestion</para>
+            </listitem>
+            <listitem>
+                <para>[<link xlink:href="https://jira.kuali.org/browse/KULRICE-9395"
+                    >KULRICE-9395</link>] - KRAD UserControl not sending valid parameters for Lookup</para>
+            </listitem>
+        </itemizedlist>           
+        
+    </section>
+</article>
