@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    
+    Copyright 2005-2013 The Kuali Foundation
+    
+    Licensed under the Educational Community License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    
+    http://www.opensource.org/licenses/ecl2.php
+    
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    
+-->
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0">
+    <info>
+        <title>Kuali Rice ${project.version} Release Notes</title>
+        <edition>${project.version}</edition>
+        <pubdate>Released: ${docbook.build.timestamp}</pubdate>
+    </info>
+    <section xml:id="overview" xreflabel="Overview">
+        <title>Overview</title>
+        <para>Welcome to Rice ${project.version}! </para>
+        <section>
+            <title>Release Highlights</title>
+            <para> Rice ${project.version} is a bug fix release with some documentation
+                updates.</para>
+        </section>
+        <section>
+            <title>Download</title>
+            <para>Kuali Rice ${project.version} can be downloaded from the Rice website at <link xlink:show="new" xlink:href="http://kuali.org/rice/download">http://kuali.org/rice/download</link>.</para>
+            <para>There are three different distributions of Rice available: source, binary and
+                server. Please read the <link xlink:href="http://site.kuali.org/rice/${project.version}/reference/html/IG.html">Installation Guide</link> for
+                more details on each of these distributions.</para>
+            <para>Applications can also consume Rice from the maven site at <link
+                xlink:href="http://search.maven.org/#search|ga|1|org.kuali.rice"
+                >http://search.maven.org/#search|ga|1|org.kuali.rice</link>.</para>
+        </section>
+        <section>
+            <title>Documentation</title>
+            <para>API Documentation can be found at <link xlink:show="new" xlink:href="http://site.kuali.org/rice/${project.version}/apidocs/index.html">http://site.kuali.org/rice/${project.version}/apidocs/index.html</link></para>
+            <para>Formal documentation can be found at <link xlink:show="new"
+                xlink:href="http://site.kuali.org/rice/${project.version}/reference/html/portal.html"
+                >http://site.kuali.org/rice/${project.version}/reference/html/portal.html</link>.
+                This documentation is still in the process of review and update which will continue
+                through subsequent releases, so please follow the notes in each document to report
+                any outdated information.</para>
+        </section>
+        <section>
+            <title>Contact</title>
+            <para>If you encounter any difficulty, please don't hesitate to contact the Rice team on
+                our public collaboration mailing list at <email>rice.collab@kuali.org</email>.
+                Please indicate that you are using the ${project.version} version of Rice.</para>
+        </section>
+    </section>
+    <section xml:id="upgrade-guide" xreflabel="Upgrade Guide">
+        <title>Upgrade Guide</title>
+        <caution><para>We recommend backing up your database before performing any upgrade!</para></caution>
+        <section>
+            <title>Upgrading the server database</title>
+            <para>MySQL and Oracle scripts for performing these updates are available in the
+                following locations in the Rice distribution downloads:<variablelist>
+                    <varlistentry>
+                        <term>MySQL</term>
+                        <listitem>
+                            <para><code>scripts/upgrades/2.2.3 to
+                                    2.2.4/final/update_final_mysql.sql</code></para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>Oracle</term>
+                        <listitem>
+                            <para><code>scripts/upgrades/2.2.3 to
+                                    2.2.4/final/update_final_oracle.sql</code></para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist></para>
+        </section>
+        <section>
+            <title>Upgrading the client database</title>
+            <para>MySQL and Oracle scripts for performing these updates are available in the
+                following locations in the Rice distribution downloads:<variablelist>
+                    <varlistentry>
+                        <term>MySQL</term>
+                        <listitem>
+                            <para><code>scripts/upgrades/2.2.3 to
+                                    2.2.4/final/update_client_final_mysql.sql</code></para>
+                        </listitem>
+                    </varlistentry>
+                    <varlistentry>
+                        <term>Oracle</term>
+                        <listitem>
+                            <para><code>scripts/upgrades/2.2.3 to
+                                    2.2.4/final/update_client_final_oracle.sql</code></para>
+                        </listitem>
+                    </varlistentry>
+                </variablelist></para>
+        </section>
+    </section>
+    <section xml:id="items_addressed_in_rice">
+        <title>Items Addressed in Rice ${project.version}</title>
+        <section>
+            <title>Bug Fix</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-6103'>KULRICE-6103</link>] - Ensure we don't have any remaining references to "edu.iu" in our documentation</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-7864'>KULRICE-7864</link>] - CONTRIB: do not ignore validation when ad hoc route for completion request is receiving positive action (complete, approve, blanket approve)</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-8724'>KULRICE-8724</link>] - Make sure document explanation and description fields have no sensitive data entered</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-8762'>KULRICE-8762</link>] - CONTRIB: "Approve &amp; Blanket Approve" button should be disabled for a person who is doing COMPLETE action and "CANCEL" button should be enabled</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9021'>KULRICE-9021</link>] - Impex tool does not import into mysql properly for MySQL 5.6.x and indexes on large columns</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9125'>KULRICE-9125</link>] - Readonly=true overridden in collections</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9369'>KULRICE-9369</link>] - Upgrade Script Error</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9411'>KULRICE-9411</link>] - KEN Web Service URL incorrect in 2.x TRG</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9563'>KULRICE-9563</link>] - Editing permission that has perm id prefixed by "KFS" - receive error message: "The Permission Identifier (Permission Identifier) may only consist of digits." </para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9683'>KULRICE-9683</link>] - Quartz link in system admin tab throws a stack trace.</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        
+        
+        <section>
+            <title>Improvement</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-8799'>KULRICE-8799</link>] - version compatibility integration test is over-sensitive</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        
+        
+        <section>
+            <title>Task</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-6140'>KULRICE-6140</link>] - Document Delivery Types - User Guide</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9020'>KULRICE-9020</link>] - Update documentation to reflect mysql settings for the latest version (5.6.x)</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9137'>KULRICE-9137</link>] - Fix copyright plugin excludes and restore original headers on non-foundation authored files</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9438'>KULRICE-9438</link>] - Not able to edit rules that have attributes - the attribute disappears once the doc is saved or submitted</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9588'>KULRICE-9588</link>] - Correct KEW documentation on implementing a thin client</para>
+                    </listitem>
+                    <listitem>
+                        <para>[<link xlink:href='https://jira.kuali.org/browse/KULRICE-9714'>KULRICE-9714</link>] - Update or remove incorrect directory information from README.txt</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    </section>
+</article>
