@@ -66,3 +66,4 @@
 
  <div class="footerbevel">&nbsp;</div>
  <div id="footer-copyright"> <bean:message key="app.copyright" /></div>
+ <div id="build">${ConfigProperties.version} (${ConfigProperties.datasource.ojb.platform})</div>

@@ -47,4 +47,3 @@ if (top.location != self.location) {
   <div id="feedback">
   	<a class="portal_link" href="<bean:message key="app.feedback.link"/>" target="_blank" title="<bean:message key="app.feedback.linkText" />"><bean:message key="app.feedback.linkText" /></a>
   </div>
-  <div id="build">${ConfigProperties.version} (${ConfigProperties.datasource.ojb.platform})</div>
