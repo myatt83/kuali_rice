@@ -140,7 +140,7 @@
 					
 					<c:if test="${KualiForm.renderSearchButtons}">
 		                <button name="methodToCall.search" type="submit" class="btn btn-primary">Search</button>
-        		        <button name="methodToCall.clearValues" type="submit" class="btn">Clear</button>
+        		        <button name="methodToCall.clearValues" type="submit" class="btn btn-default">Clear</button>
 					</c:if>	
 					
 					<c:if test="${KualiForm.formKey!=''}">
@@ -148,7 +148,7 @@
 						<input name="" type="t" value="" style="display:none"/>
 						
 						<c:if test="${!empty KualiForm.backLocation}"><a
-							href='<c:out value="${KualiForm.backLocation}?methodToCall=refresh&docFormKey=${KualiForm.formKey}&anchor=${KualiForm.lookupAnchor}&docNum=${KualiForm.docNum}" />' title="Cancel" class="btn">Cancel</a></c:if>
+							href='<c:out value="${KualiForm.backLocation}?methodToCall=refresh&docFormKey=${KualiForm.formKey}&anchor=${KualiForm.lookupAnchor}&docNum=${KualiForm.docNum}" />' title="Cancel" class="btn btn-default">Cancel</a></c:if>
 					</c:if>
 					
 					<!-- Optional extra buttons -->
