@@ -52,7 +52,7 @@
         <!-- For Debugging, uncomment out the values below (and comment out the minimized js above) -->
         <value>krad/plugins/jquery/jquery-1.10.2.min.js</value>
         <value>krad/plugins/jquery/jquery-migrate-1.2.1.min.js</value>
-        <value>krad/plugins/jqueryUI/jquery-ui-1.8.9.js</value>
+        <value>krad/plugins/jqueryUI/jquery-ui-1.10.4.js</value>
         <value>krad/plugins/cookie/jquery.cookie.js</value>
         <value>krad/plugins/jgrowl/jquery.jgrowl.js</value>
         <value>krad/plugins/blockUI/jquery.blockUI.js</value>
