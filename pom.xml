@@ -107,7 +107,7 @@
       Switching to the 2.1-based verson of jaxb-impl version 2.1.13 causes the problem to go away.
     -->
     <cxf-java2ws-plugin.jaxb-impl.version>2.1.13</cxf-java2ws-plugin.jaxb-impl.version>
-    <db-ojb.version>1.0.4-patch9-SNAPSHOT</db-ojb.version>
+    <db-ojb.version>1.0.4-patch9-rsmart</db-ojb.version>
     <displaytag.version>1.2</displaytag.version>
     <dom4j.version>1.6.1</dom4j.version>
     <dwr.version>3.0.RC2</dwr.version>
