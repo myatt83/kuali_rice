@@ -197,6 +197,9 @@
 
     <!-- Directory wsdl's get generated into -->
     <wsdl.dir>${project.build.directory}/wsdl</wsdl.dir>
+
+    <jdk.source.version>1.6</jdk.source.version>
+    <jdk.target.version>1.6</jdk.target.version>
   </properties>
 
   <profiles>
@@ -623,6 +626,8 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>
+            <source>${jdk.source.version}</source>
+            <target>${jdk.target.version}</target>
             <!-- impl module is huge and requires at least 768m to compile -->
             <fork>true</fork>
             <meminitial>256</meminitial>
