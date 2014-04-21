@@ -40,7 +40,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>rice-impl</artifactId>
-      <version>${project.version}</version>
+      <version>2.1.1.0-rsmart</version>
     </dependency>
 
   </dependencies>
