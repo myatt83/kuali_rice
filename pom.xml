@@ -28,7 +28,7 @@
   <packaging>pom</packaging>
   <name>Rice</name>
   <inceptionYear>2005</inceptionYear>
-  <version>2.1.1.0-cmu</version>
+  <version>2.1.1.0-cmu-SNAPSHOT</version>
   <description>
     The Kuali Rice effort provides an enterprise class middleware suite of integrated products that allows
     both Kuali and non-Kuali applications
@@ -331,7 +331,7 @@
             <dependency>
               <groupId>org.kuali.rice</groupId>
               <artifactId>rice-checkstyle</artifactId>
-              <version>2.1.1.0-cmu</version>
+              <version>2.1.1.0-cmu-SNAPSHOT</version>
             </dependency>
           </dependencies>
         </plugin>
