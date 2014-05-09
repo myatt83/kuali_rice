@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.kuali.rice</groupId>
     <artifactId>rice</artifactId>
-    <version>2.1.1.0-cmu-SNAPSHOT</version>
+    <version>2.1.1.0-cmu</version>
   </parent>
   <artifactId>rice-sampleapp</artifactId>
   <packaging>war</packaging>
@@ -170,32 +170,32 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>rice-impex-master</artifactId>
-      <version>2.1.1.0-cmu-SNAPSHOT</version>
+      <version>2.1.1.0-cmu</version>
     </dependency>
 
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>rice-web</artifactId>
-      <version>2.1.1.0-cmu-SNAPSHOT</version>
+      <version>2.1.1.0-cmu</version>
       <type>war</type>
     </dependency>
 
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>rice-impl</artifactId>
-      <version>2.1.1.0-cmu-SNAPSHOT</version>
+      <version>2.1.1.0-cmu</version>
     </dependency>
 
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>rice-edl-impl</artifactId>
-      <version>2.1.1.0-cmu-SNAPSHOT</version>
+      <version>2.1.1.0-cmu</version>
     </dependency>
 
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>rice-krms-impl</artifactId>
-      <version>2.1.1.0-cmu-SNAPSHOT</version>
+      <version>2.1.1.0-cmu</version>
     </dependency>
 
     <dependency>
