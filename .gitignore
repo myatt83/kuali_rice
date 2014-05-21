@@ -3,3 +3,5 @@ overlays/
 .gitignore
 **/.project
 **/.launch
+**/.classpath
+**/.settings/
