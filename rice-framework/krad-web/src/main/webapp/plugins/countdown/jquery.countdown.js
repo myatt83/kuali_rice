@@ -53,7 +53,7 @@ function Countdown() {
 	};
 	$.extend(this._defaults, this.regional['']);
 	this._serverSyncs = [];
-    // ISSUE-201 FIX for performance variable. See: https://github.com/kbwood/countdown/issues/18
+    // ISSUE-207 FIX for performance variable. See: https://github.com/kbwood/countdown/issues/18
     var now = (typeof Date.now == 'function' ? Date.now :
 		function() { return new Date().getTime(); });
 	var perfAvail = (window.performance && typeof window.performance.now == 'function');
@@ -64,7 +64,7 @@ function Countdown() {
 			// Integer milliseconds since unix epoch
 			timestamp || now());
 		if (drawStart - animationStartTime >= 1000) {
-					self._updateElems();
+			plugin._updateTargets();
 			animationStartTime = drawStart;
 		}
 		requestAnimationFrame(timerCallBack);
