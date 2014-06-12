@@ -53,15 +53,18 @@ function Countdown() {
 	};
 	$.extend(this._defaults, this.regional['']);
 	this._serverSyncs = [];
+    // ISSUE-201 FIX for performance variable. See: https://github.com/kbwood/countdown/issues/18
+    var now = (typeof Date.now == 'function' ? Date.now :
+		function() { return new Date().getTime(); });
+	var perfAvail = (window.performance && typeof window.performance.now == 'function');
 	// Shared timer for all countdowns
 	function timerCallBack(timestamp) {
 		var drawStart = (timestamp < 1e12 ? // New HTML5 high resolution timer
-			(drawStart = performance.now ?
-			(performance.now() + performance.timing.navigationStart) : Date.now()) :
+			(perfAvail ? (performance.now() + performance.timing.navigationStart) : now()) :
 			// Integer milliseconds since unix epoch
-			timestamp || new Date().getTime());
+			timestamp || now());
 		if (drawStart - animationStartTime >= 1000) {
-			plugin._updateTargets();
+					self._updateElems();
 			animationStartTime = drawStart;
 		}
 		requestAnimationFrame(timerCallBack);
