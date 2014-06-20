@@ -149,20 +149,21 @@
                       conversion="org.kuali.rice.core.framework.persistence.ojb.conversion.OjbCharBooleanConversion"/>
   </class-descriptor>
 
-	<class-descriptor class="edu.msu.ebsp.rice.krad.bo.DataBaseAttachment" table="KRNS_ATT_T">
-		<field-descriptor name="noteIdentifier" column="NTE_ID" jdbc-type="BIGINT" primarykey="true" index="true" />
-		<field-descriptor name="objectId" column="OBJ_ID" jdbc-type="VARCHAR" index="true" />
-		<field-descriptor name="versionNumber" column="VER_NBR" jdbc-type="BIGINT" locking="true" />
-		<field-descriptor name="attachmentMimeTypeCode" column="MIME_TYP" jdbc-type="VARCHAR" />
-		<field-descriptor name="attachmentFileName" column="FILE_NM" jdbc-type="VARCHAR" />
-		<field-descriptor name="attachmentIdentifier" column="ATT_ID" jdbc-type="VARCHAR" />
-		<field-descriptor name="attachmentFileSize" column="FILE_SZ" jdbc-type="BIGINT" />
-		<field-descriptor name="attachmentTypeCode" column="ATT_TYP_CD" jdbc-type="VARCHAR" />
-		<field-descriptor name="attachmentContent" column="FILE_CONTENT" jdbc-type="BLOB" />
-		<reference-descriptor name="note" class-ref="org.kuali.rice.kns.bo.Note" auto-retrieve="object" auto-update="none" auto-delete="none">
-			<foreignkey field-ref="noteIdentifier" />
-		</reference-descriptor>
-	</class-descriptor> 
+  <class-descriptor class="edu.msu.ebsp.rice.krad.bo.DataBaseAttachment" table="KRNS_ATT_T">
+    <field-descriptor name="noteIdentifier" column="NTE_ID" jdbc-type="BIGINT" primarykey="true" indexed="true"/>
+    <field-descriptor name="objectId" column="OBJ_ID" jdbc-type="VARCHAR" indexed="true"/>
+    <field-descriptor name="versionNumber" column="VER_NBR" jdbc-type="BIGINT" locking="true"/>
+    <field-descriptor name="attachmentMimeTypeCode" column="MIME_TYP" jdbc-type="VARCHAR"/>
+    <field-descriptor name="attachmentFileName" column="FILE_NM" jdbc-type="VARCHAR"/>
+    <field-descriptor name="attachmentIdentifier" column="ATT_ID" jdbc-type="VARCHAR"/>
+    <field-descriptor name="attachmentFileSize" column="FILE_SZ" jdbc-type="BIGINT"/>
+    <field-descriptor name="attachmentTypeCode" column="ATT_TYP_CD" jdbc-type="VARCHAR"/>
+    <field-descriptor name="attachmentContent" column="FILE_CONTENT" jdbc-type="BLOB" />
+    <reference-descriptor name="note" class-ref="org.kuali.rice.kns.bo.Note" auto-retrieve="object" auto-update="none"
+                          auto-delete="none">
+      <foreignkey field-ref="noteIdentifier"/>
+    </reference-descriptor>
+  </class-descriptor>
 
   <class-descriptor class="org.kuali.rice.krad.bo.AdHocRouteRecipient" table="KRNS_ADHOC_RTE_ACTN_RECIP_T">
     <field-descriptor name="type" column="RECIP_TYP_CD" jdbc-type="INTEGER" primarykey="true" indexed="true"/>
