@@ -159,7 +159,7 @@
     <field-descriptor name="attachmentFileSize" column="FILE_SZ" jdbc-type="BIGINT"/>
     <field-descriptor name="attachmentTypeCode" column="ATT_TYP_CD" jdbc-type="VARCHAR"/>
     <field-descriptor name="attachmentContent" column="FILE_CONTENT" jdbc-type="BLOB" />
-    <reference-descriptor name="note" class-ref="org.kuali.rice.kns.bo.Note" auto-retrieve="object" auto-update="none"
+    <reference-descriptor name="note" class-ref="org.kuali.rice.krad.bo.Note" auto-retrieve="object" auto-update="none"
                           auto-delete="none">
       <foreignkey field-ref="noteIdentifier"/>
     </reference-descriptor>
