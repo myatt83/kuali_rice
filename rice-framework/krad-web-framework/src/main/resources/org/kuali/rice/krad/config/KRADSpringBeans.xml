@@ -344,7 +344,7 @@
     <property name="attachmentService" ref="attachmentService"/>
   </bean>
 
-  <bean id="attachmentService" class="org.kuali.rice.krad.service.impl.AttachmentServiceImpl">
+  <bean id="attachmentService" class="edu.msu.ebsp.rice.krad.service.impl.DataBaseAttachmentServiceImpl">
     <property name="kualiConfigurationService">
       <ref bean="kualiConfigurationService"/>
     </property>
@@ -665,7 +665,7 @@
     <property name="attachmentDaoOjb" ref="attachmentDaoOjb"/>
   </bean>
 
-  <bean id="attachmentDaoOjb" parent="platformAwareDao" class="org.kuali.rice.krad.dao.impl.AttachmentDaoOjb"/>
+  <bean id="attachmentDaoOjb" parent="platformAwareDao" class="edu.msu.ebsp.rice.krad.dao.impl.DataBaseAttachmentDaoOjb" />
 
   <bean id="businessObjectDao" class="org.kuali.rice.krad.dao.proxy.BusinessObjectDaoProxy">
     <!-- Constructor injection only please to help enforce completeness of instances -->

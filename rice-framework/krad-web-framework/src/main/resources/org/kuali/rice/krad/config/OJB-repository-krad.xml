@@ -149,7 +149,7 @@
                       conversion="org.kuali.rice.core.framework.persistence.ojb.conversion.OjbCharBooleanConversion"/>
   </class-descriptor>
 
-  <class-descriptor class="org.kuali.rice.krad.bo.Attachment" table="KRNS_ATT_T">
+  <class-descriptor class="edu.msu.ebsp.rice.krad.bo.DataBaseAttachment" table="KRNS_ATT_T">
     <field-descriptor name="noteIdentifier" column="NTE_ID" jdbc-type="BIGINT" primarykey="true" indexed="true"/>
     <field-descriptor name="objectId" column="OBJ_ID" jdbc-type="VARCHAR" indexed="true"/>
     <field-descriptor name="versionNumber" column="VER_NBR" jdbc-type="BIGINT" locking="true"/>
@@ -158,7 +158,8 @@
     <field-descriptor name="attachmentIdentifier" column="ATT_ID" jdbc-type="VARCHAR"/>
     <field-descriptor name="attachmentFileSize" column="FILE_SZ" jdbc-type="BIGINT"/>
     <field-descriptor name="attachmentTypeCode" column="ATT_TYP_CD" jdbc-type="VARCHAR"/>
-    <reference-descriptor name="note" class-ref="org.kuali.rice.krad.bo.Note" auto-retrieve="true" auto-update="none"
+    <field-descriptor name="attachmentContent" column="FILE_CONTENT" jdbc-type="BLOB" />
+    <reference-descriptor name="note" class-ref="org.kuali.rice.krad.bo.Note" auto-retrieve="object" auto-update="none"
                           auto-delete="none">
       <foreignkey field-ref="noteIdentifier"/>
     </reference-descriptor>
