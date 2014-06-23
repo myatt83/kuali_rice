@@ -344,7 +344,7 @@
     <property name="attachmentService" ref="attachmentService"/>
   </bean>
 
-  <bean id="attachmentService" class="edu.msu.ebsp.rice.kns.service.impl.DataBaseAttachmentServiceImpl">
+  <bean id="attachmentService" class="edu.msu.ebsp.rice.krad.service.impl.DataBaseAttachmentServiceImpl">
     <property name="kualiConfigurationService">
       <ref bean="kualiConfigurationService"/>
     </property>
