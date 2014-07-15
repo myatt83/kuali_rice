@@ -45,6 +45,10 @@ public abstract class BusinessObjectBase implements BusinessObject {
                 if (BusinessObject.class.isAssignableFrom(field.getType())) {
                     return false;
                 }
+                // ignore printing out byte arrays in toString methods
+                if (byte[].class.isAssignableFrom(field.getType())) {
+                  return false;
+                }
                 return super.accept(field);
             }
         };
