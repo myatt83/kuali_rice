@@ -56,11 +56,6 @@
       <artifactId>rice-core-impl</artifactId>
       <version>2.3.6.3-rsmart-SNAPSHOT</version>
     </dependency>
-<!--    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>rice-impl</artifactId>
-      <version>2.3.6.0-rsmart-SNAPSHOT</version>
-    </dependency>-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
